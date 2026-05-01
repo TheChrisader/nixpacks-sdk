@@ -1,0 +1,49 @@
+{
+  "name": "nixpacks-sdk",
+  "version": "0.1.0",
+  "description": "A typed Node.js SDK for the Nixpacks CLI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["nixpacks", "docker", "sdk", "nix", "build"],
+  "author": "TheChrisader",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheChrisader/nixpacks-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/TheChrisader/nixpacks-sdk/issues"
+  },
+  "homepage": "https://github.com/TheChrisader/nixpacks-sdk#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
+    "eslint": "^9.39.4",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  }
+}
