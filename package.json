@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheChrisader/nixpacks-sdk"
+    "url": "git+https://github.com/TheChrisader/nixpacks-sdk.git"
   },
   "bugs": {
     "url": "https://github.com/TheChrisader/nixpacks-sdk/issues"
